@@ -5,27 +5,27 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Terms & conditions",
   description:
-    "Terms and conditions governing the use of the Cube Holdings Ltd. website and our services.",
+    "Terms and conditions governing the use of the CubeSense Properties website and our services.",
 };
 
 const SECTIONS: { h: string; p?: string[]; list?: string[] }[] = [
   {
     h: "1. General information",
     p: [
-      "Cube Holdings Ltd. is a real estate development company operating in Bangladesh, providing residential, commercial and investment-related real estate services.",
+      "CubeSense Properties is a real estate development company operating in Bangladesh, providing residential, commercial and investment-related real estate services.",
     ],
   },
   {
     h: "2. Acceptance of terms",
     p: [
-      "By accessing this website or communicating with Cube Holdings Ltd., you acknowledge that you have read, understood and agreed to these terms and conditions. If you do not agree, please refrain from using our services or website.",
+      "By accessing this website or communicating with CubeSense Properties, you acknowledge that you have read, understood and agreed to these terms and conditions. If you do not agree, please refrain from using our services or website.",
     ],
   },
   {
     h: "3. Property information",
     p: [
       "All project details, brochures, floor plans, layouts, images, specifications, pricing and availability displayed on this website or in promotional materials are for informational purposes only.",
-      "Cube Holdings Ltd. reserves the right to:",
+      "CubeSense Properties reserves the right to:",
     ],
     list: [
       "Modify project designs, layouts, specifications, pricing or features without prior notice.",
@@ -53,7 +53,7 @@ const SECTIONS: { h: string; p?: string[]; list?: string[] }[] = [
   {
     h: "6. Handover timeline",
     p: [
-      "Cube Holdings Ltd. strives to complete projects within the estimated timeline. However, project completion and handover may be affected by:",
+      "CubeSense Properties strives to complete projects within the estimated timeline. However, project completion and handover may be affected by:",
     ],
     list: [
       "Natural disasters",
@@ -66,7 +66,7 @@ const SECTIONS: { h: string; p?: string[]; list?: string[] }[] = [
   {
     h: "7. Intellectual property",
     p: [
-      "All website content including logos, designs, text, graphics, images, videos, brochures and branding materials are the intellectual property of Cube Holdings Ltd. and may not be copied, reproduced, distributed or used without written permission.",
+      "All website content including logos, designs, text, graphics, images, videos, brochures and branding materials are the intellectual property of CubeSense Properties and may not be copied, reproduced, distributed or used without written permission.",
     ],
   },
   {
@@ -82,18 +82,18 @@ const SECTIONS: { h: string; p?: string[]; list?: string[] }[] = [
   {
     h: "9. Third-party links",
     p: [
-      "Our website may contain links to third-party websites for convenience. Cube Holdings Ltd. is not responsible for the content, policies or practices of external websites.",
+      "Our website may contain links to third-party websites for convenience. CubeSense Properties is not responsible for the content, policies or practices of external websites.",
     ],
   },
   {
     h: "10. Privacy",
     p: [
-      "Any personal information shared with Cube Holdings Ltd. through forms, calls or email communication will be handled with reasonable confidentiality and used for business communication purposes only.",
+      "Any personal information shared with CubeSense Properties through forms, calls or email communication will be handled with reasonable confidentiality and used for business communication purposes only.",
     ],
   },
   {
     h: "11. Limitation of liability",
-    p: ["Cube Holdings Ltd. shall not be responsible for:"],
+    p: ["CubeSense Properties shall not be responsible for:"],
     list: [
       "Indirect or incidental damages",
       "Website interruptions or technical issues",

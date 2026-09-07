@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "About us",
   description:
-    "Since 2012, Cube Holdings Ltd. has built residential and commercial developments across Dhaka. A REHAB member committed to quality, integrity and long-term relationships.",
+    "Since 2012, CubeSense Properties has built residential and commercial developments across Dhaka. A REHAB member committed to quality, integrity and long-term relationships.",
 };
 
 const PRINCIPLES = [
@@ -58,7 +58,7 @@ export default function AboutPage() {
         <div className="grid gap-16 lg:grid-cols-[1fr_1fr]">
           <Reveal className="max-w-2xl space-y-6 text-[1.0625rem] leading-relaxed">
             <p>
-              Since {site.since}, Cube Holdings Ltd. has been committed to
+              Since {site.since}, CubeSense Properties has been committed to
               transforming urban living in Bangladesh through carefully designed
               residential and commercial developments that combine modern
               architecture, premium quality and a sense of permanence.
@@ -127,7 +127,7 @@ export default function AboutPage() {
             {PRINCIPLES.map((p, i) => (
               <Reveal key={p.n} delay={(i % 2) * 90}>
                 <article className="border-t pt-6">
-                  <span className="font-mono text-xs text-brand-600">{p.n}</span>
+                  <span className="font-mono text-xs text-gold-600 dark:text-gold-400">{p.n}</span>
                   <h3 className="display mt-4 text-[1.625rem]">{p.t}</h3>
                   <p className="mt-3 max-w-md text-[0.9375rem] leading-relaxed text-[var(--muted)]">
                     {p.d}

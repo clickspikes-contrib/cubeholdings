@@ -22,7 +22,7 @@ export function StatsStrip() {
             i > 0 ? "lg:border-l lg:border-[var(--line)]" : ""
           } ${i % 2 === 1 ? "border-l border-[var(--line)] lg:border-l" : ""}`}
         >
-          <dt className="display text-[clamp(2rem,4.5vw,3rem)] tabular-nums">
+          <dt className="display text-[clamp(2rem,4.5vw,3rem)] tabular-nums text-brand-800 dark:text-gold-400">
             <CountUp value={s.n} suffix={s.suffix} />
           </dt>
           <dd className="mt-2 text-[0.8125rem] leading-snug text-[var(--muted)]">

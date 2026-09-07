@@ -7,7 +7,7 @@ import { posts, formatDate } from "@/data/posts";
 export const metadata: Metadata = {
   title: "Blog",
   description:
-    "News, guides and perspective on buying, building and investing in property in Dhaka, from Cube Holdings Ltd.",
+    "News, guides and perspective on buying, building and investing in property in Dhaka, from CubeSense Properties",
 };
 
 export default function BlogPage() {

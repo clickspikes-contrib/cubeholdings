@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Careers",
   description:
-    "Join Cube Holdings Ltd. — a forward-thinking real estate developer in Dhaka where innovation, integrity and excellence drive everything we do.",
+    "Join CubeSense Properties — a forward-thinking real estate developer in Dhaka where innovation, integrity and excellence drive everything we do.",
 };
 
 const REASONS = [

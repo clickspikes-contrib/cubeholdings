@@ -1,40 +1,46 @@
 @import "tailwindcss";
 
 @theme {
-  /* Ink — warm near-black, borrowed from architectural drawings */
-  --color-ink-950: #0c0f0f;
-  --color-ink-900: #141918;
-  --color-ink-800: #1d2423;
-  --color-ink-700: #2b3533;
-  --color-ink-600: #465150;
-  --color-ink-500: #6b7776;
-  --color-ink-400: #8f9a99;
-  --color-ink-300: #b6bfbe;
-  --color-ink-200: #d6dcdb;
-  --color-ink-100: #e9eded;
-  --color-ink-50:  #f4f6f5;
+  /* Ink — near-black carrying a trace of the brand green, so neutrals sit
+     in the same family as the mark rather than reading as cold grey. */
+  --color-ink-950: #080d0a;
+  --color-ink-900: #101713;
+  --color-ink-800: #18211c;
+  --color-ink-700: #26322b;
+  --color-ink-600: #414e46;
+  --color-ink-500: #66736b;
+  --color-ink-400: #8b978f;
+  --color-ink-300: #b3bdb7;
+  --color-ink-200: #d4dbd7;
+  --color-ink-100: #e8ece9;
+  --color-ink-50:  #f3f6f4;
 
-  /* Paper — near-white ground with a faintly warm band for alternating sections */
+  /* Paper — warm off-white, picked up from the logo's cream field. */
   --color-paper: #ffffff;
-  --color-paper-dim: #f5f6f4;
+  --color-paper-dim: #f6f4ef;
 
-  /* Teal — the brand mark, deepened for print-like weight */
-  --color-brand-900: #0a3f43;
-  --color-brand-800: #0d5459;
-  --color-brand-700: #106b71;
-  --color-brand-600: #128086;
-  --color-brand-500: #168b92;
-  --color-brand-400: #3aa7ad;
-  --color-brand-300: #6fc3c7;
-  --color-brand-200: #a8dcdf;
-  --color-brand-100: #d5eeef;
+  /* Forest green — sampled from the logo mark (#17402e is brand-800). */
+  --color-brand-950: #0b2016;
+  --color-brand-900: #102e20;
+  --color-brand-800: #17402e;
+  --color-brand-700: #1e5a3f;
+  --color-brand-600: #27734f;
+  --color-brand-500: #338c61;
+  --color-brand-400: #55a97e;
+  --color-brand-300: #85c5a1;
+  --color-brand-200: #b8dfc8;
+  --color-brand-100: #dcefe4;
 
-  /* Clay — the accent, from terracotta/brick rather than the old red */
-  --color-clay-700: #9c3a26;
-  --color-clay-600: #b8492f;
-  --color-clay-500: #c85a3c;
-  --color-clay-400: #d97e63;
-  --color-clay-200: #f0c9bb;
+  /* Tan — the cube's top face (#b9894b is gold-500). Used sparingly as the
+     accent against the green. */
+  --color-gold-800: #7d5a2c;
+  --color-gold-700: #966d36;
+  --color-gold-600: #a87b41;
+  --color-gold-500: #b9894b;
+  --color-gold-400: #cba36e;
+  --color-gold-300: #dcc09b;
+  --color-gold-200: #ecdcc4;
+  --color-gold-100: #f7efe3;
 
   /* Sneat's stack: Public Sans with the system fallbacks it ships with. */
   --font-display: var(--font-public-sans), -apple-system, "Segoe UI", system-ui, sans-serif;
@@ -46,14 +52,14 @@
   /* Layered shadows. Real depth comes from stacking a tight contact shadow
      under a wide ambient one — a single large blur reads as fog. Tinted with
      the ink hue rather than pure black so it sits in the palette. */
-  --shadow-xs: 0 1px 2px -1px rgb(12 15 15 / 0.06),
-               0 1px 1px -1px rgb(12 15 15 / 0.04);
-  --shadow-sm: 0 2px 4px -2px rgb(12 15 15 / 0.07),
-               0 4px 12px -4px rgb(12 15 15 / 0.06);
-  --shadow-md: 0 4px 8px -4px rgb(12 15 15 / 0.08),
-               0 12px 28px -8px rgb(12 15 15 / 0.10);
-  --shadow-lg: 0 8px 16px -8px rgb(12 15 15 / 0.10),
-               0 24px 48px -12px rgb(12 15 15 / 0.14);
+  --shadow-xs: 0 1px 2px -1px rgb(8 13 10 / 0.06),
+               0 1px 1px -1px rgb(8 13 10 / 0.04);
+  --shadow-sm: 0 2px 4px -2px rgb(8 13 10 / 0.07),
+               0 4px 12px -4px rgb(8 13 10 / 0.06);
+  --shadow-md: 0 4px 8px -4px rgb(8 13 10 / 0.08),
+               0 12px 28px -8px rgb(8 13 10 / 0.10);
+  --shadow-lg: 0 8px 16px -8px rgb(8 13 10 / 0.10),
+               0 24px 48px -12px rgb(8 13 10 / 0.14);
 
   /* One radius ramp so nothing is left at an arbitrary value. */
   --radius-sm: 0.625rem;

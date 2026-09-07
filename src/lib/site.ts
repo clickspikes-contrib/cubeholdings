@@ -1,21 +1,32 @@
+/**
+ * Site-wide identity and contact details.
+ *
+ * NOTE — carried over from Cube Holdings and NOT yet updated for CubeSense:
+ * the email, phone numbers, office address and social handles below still
+ * point at the original business. They are left as-is deliberately: making
+ * up contact details would put wrong information in front of real visitors.
+ * Replace each value marked `verify` before this goes live.
+ */
 export const site = {
-  name: "Cube Holdings Ltd.",
-  short: "Cube Holdings",
+  name: "CubeSense Properties",
+  short: "CubeSense",
   tagline: "A way of comfortable living",
   vision: "The Address of Your Dreams.",
   since: 2012,
-  url: "https://www.cubeholdingsltd.com",
-  email: "cubeholdingsltd@gmail.com",
-  hotline: "+8801841616104-11",
-  hotlineTel: "+8801841616104",
-  sales: "+8801841616116",
-  whatsapp: "8801841616116",
+  url: "https://www.cubesenseproperties.com", // verify
+  email: "cubeholdingsltd@gmail.com", // verify
+  hotline: "+8801841616104-11", // verify
+  hotlineTel: "+8801841616104", // verify
+  sales: "+8801841616116", // verify
+  whatsapp: "8801841616116", // verify
   office: {
+    // verify — building, address and map pin are the previous company's
     building: "Cube Maqbul Inventure",
     line: "Level 5, House 07, Road 17, Block D, Banani, Dhaka 1213, Bangladesh",
     maps: "https://maps.google.com/?q=Cube+Maqbul+Inventure+Banani+Dhaka",
   },
   social: {
+    // verify — these accounts belong to the previous company
     facebook: "https://www.facebook.com/cubeholdingsltd",
     instagram: "https://www.instagram.com/cubeholdingsltd",
     youtube: "https://www.youtube.com/@cubeholdingsltd.3721",

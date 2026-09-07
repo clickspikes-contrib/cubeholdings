@@ -1,4 +1,4 @@
-// Auto-generated from cubeholdingsltd.com project data. Source of truth for all project pages.
+// Auto-generated from cubesenseproperties.com project data. Source of truth for all project pages.
 
 export type ProjectStatus = "ongoing" | "handed-over" | "upcoming";
 

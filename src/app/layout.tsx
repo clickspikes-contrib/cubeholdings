@@ -30,7 +30,7 @@ export const metadata: Metadata = {
     template: `%s — ${site.name}`,
   },
   description:
-    "Since 2012, Cube Holdings Ltd. has built residential and commercial developments across Bashundhara, Uttara, Banani and Jolshiri Abashon — designed for comfort, built to last.",
+    "Since 2012, CubeSense Properties has built residential and commercial developments across Bashundhara, Uttara, Banani and Jolshiri Abashon — designed for comfort, built to last.",
   openGraph: {
     type: "website",
     locale: "en_US",

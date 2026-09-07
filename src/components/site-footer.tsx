@@ -114,7 +114,7 @@ export function SiteFooter() {
 
         <div className="flex flex-col gap-4 text-xs text-[var(--muted)] sm:flex-row sm:items-center sm:justify-between">
           <p>
-            © {new Date().getFullYear()} Cube Holdings Limited. All rights
+            © {new Date().getFullYear()} CubeSense Properties. All rights
             reserved.
           </p>
           <div className="flex flex-wrap gap-x-5 gap-y-2">

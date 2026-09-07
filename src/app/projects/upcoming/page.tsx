@@ -5,7 +5,7 @@ import { byStatus } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Upcoming projects",
   description:
-    "Forthcoming residential developments from Cube Holdings Ltd. Register early interest before launch.",
+    "Forthcoming residential developments from CubeSense Properties. Register early interest before launch.",
 };
 
 export default function UpcomingPage() {

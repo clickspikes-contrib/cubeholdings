@@ -7,7 +7,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Contact us",
   description:
-    "Get in touch with Cube Holdings Ltd. Call our hotline, message us on WhatsApp or visit our head office in Banani, Dhaka.",
+    "Get in touch with CubeSense Properties. Call our hotline, message us on WhatsApp or visit our head office in Banani, Dhaka.",
 };
 
 const CHANNELS = [
@@ -98,7 +98,7 @@ export default function ContactPage() {
 
           <div className="card mt-6 overflow-hidden border border-[var(--line)]">
             <iframe
-              title="Map to Cube Holdings head office in Banani, Dhaka"
+              title="Map to CubeSense head office in Banani, Dhaka"
               src="https://www.google.com/maps?q=Banani%20Block%20D%20Road%2017%20Dhaka&output=embed"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"

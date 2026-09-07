@@ -5,7 +5,7 @@ import { byStatus } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Ongoing projects",
   description:
-    "Residential developments currently under construction by Cube Holdings Ltd. across Bashundhara, Uttara, Banani and Jolshiri Abashon.",
+    "Residential developments currently under construction by CubeSense Properties across Bashundhara, Uttara, Banani and Jolshiri Abashon.",
 };
 
 export default function OngoingPage() {

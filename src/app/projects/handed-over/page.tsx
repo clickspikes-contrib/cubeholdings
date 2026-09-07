@@ -5,7 +5,7 @@ import { byStatus } from "@/data/projects";
 export const metadata: Metadata = {
   title: "Handed over projects",
   description:
-    "Completed residential and commercial buildings delivered by Cube Holdings Ltd. in Dhaka.",
+    "Completed residential and commercial buildings delivered by CubeSense Properties in Dhaka.",
 };
 
 export default function HandedOverPage() {

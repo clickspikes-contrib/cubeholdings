@@ -5,7 +5,7 @@ import { projects, stats } from "@/data/projects";
 export const metadata: Metadata = {
   title: "All projects",
   description:
-    "Every residential and commercial development by Cube Holdings Ltd. — ongoing, upcoming and handed over.",
+    "Every residential and commercial development by CubeSense Properties — ongoing, upcoming and handed over.",
 };
 
 export default async function AllProjectsPage({

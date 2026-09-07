@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "For landowners",
   description:
-    "Partner with Cube Holdings Ltd. on a joint venture. Share your land and turn it into an address that holds its value.",
+    "Partner with CubeSense Properties on a joint venture. Share your land and turn it into an address that holds its value.",
 };
 
 const STEPS = [
@@ -65,7 +65,7 @@ export default function LandownersPage() {
               {STEPS.map((s, i) => (
                 <Reveal key={s.n} delay={i * 70}>
                   <article className="card flex gap-6 border border-[var(--line)] p-7">
-                    <span className="font-mono text-xs text-brand-600">
+                    <span className="font-mono text-xs text-gold-600 dark:text-gold-400">
                       {s.n}
                     </span>
                     <div>

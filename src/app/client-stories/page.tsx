@@ -9,7 +9,7 @@ import { site } from "@/lib/site";
 export const metadata: Metadata = {
   title: "Client stories",
   description:
-    "Walk through completed Cube Holdings buildings, see the quality we deliver, and hear from the families living in them.",
+    "Walk through completed CubeSense buildings, see the quality we deliver, and hear from the families living in them.",
 };
 
 export default function ClientStoriesPage() {
