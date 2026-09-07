@@ -1,10 +1,15 @@
 import { stats } from "@/data/projects";
+import { CountUp } from "./count-up";
 
 const ITEMS = [
-  { n: `${stats.total}+`, l: "Projects delivered & underway" },
-  { n: `${stats.apartments}+`, l: "Apartments planned" },
-  { n: `${stats.areas}`, l: "Prime Dhaka addresses" },
-  { n: `${new Date().getFullYear() - stats.since}+`, l: "Years building" },
+  { n: stats.total, suffix: "+", l: "Projects delivered & underway" },
+  { n: stats.apartments, suffix: "+", l: "Apartments planned" },
+  { n: stats.areas, suffix: "", l: "Prime Dhaka addresses" },
+  {
+    n: new Date().getFullYear() - stats.since,
+    suffix: "+",
+    l: "Years building",
+  },
 ];
 
 export function StatsStrip() {
@@ -18,7 +23,7 @@ export function StatsStrip() {
           } ${i % 2 === 1 ? "border-l border-[var(--line)] lg:border-l" : ""}`}
         >
           <dt className="display text-[clamp(2rem,4.5vw,3rem)] tabular-nums">
-            {s.n}
+            <CountUp value={s.n} suffix={s.suffix} />
           </dt>
           <dd className="mt-2 text-[0.8125rem] leading-snug text-[var(--muted)]">
             {s.l}
