@@ -77,7 +77,7 @@ export default function ContactPage() {
             ))}
           </div>
 
-          <div className="mt-10 rounded-sm border p-7">
+          <div className="card mt-10 border border-[var(--line)] p-7">
             <h3 className="label">Head office</h3>
             <p className="display mt-4 text-[1.5rem]">{site.office.building}</p>
             <p className="mt-2 text-[0.9375rem] leading-relaxed text-[var(--muted)]">
@@ -96,7 +96,7 @@ export default function ContactPage() {
             </a>
           </div>
 
-          <div className="mt-6 overflow-hidden rounded-sm border">
+          <div className="card mt-6 overflow-hidden border border-[var(--line)]">
             <iframe
               title="Map to Cube Holdings head office in Banani, Dhaka"
               src="https://www.google.com/maps?q=Banani%20Block%20D%20Road%2017%20Dhaka&output=embed"

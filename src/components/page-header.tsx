@@ -20,7 +20,7 @@ export function PageHeader({
 }) {
   return (
     <section className="px-2 pt-2 lg:px-3 lg:pt-3">
-      <div className="relative overflow-hidden rounded-[1.75rem] bg-ink-950 lg:rounded-[2.5rem]">
+      <div className="relative overflow-hidden rounded-[1.75rem] bg-ink-950 shadow-[var(--shadow-lg)] lg:rounded-[2.25rem]">
         {image && (
           <>
             <Image
@@ -31,7 +31,8 @@ export function PageHeader({
               sizes="100vw"
               className="object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/70 to-ink-950/60" />
+            <div className="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/65 to-ink-950/50" />
+            <div className="absolute inset-0 bg-gradient-to-r from-ink-950/60 via-transparent to-transparent" />
           </>
         )}
 

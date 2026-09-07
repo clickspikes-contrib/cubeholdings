@@ -66,7 +66,7 @@ export function ProjectCard({
               className="img-zoom object-cover"
             />
           )}
-          <span className="absolute left-3.5 top-3.5 rounded-full bg-brand-600 px-3 py-1.5 text-[0.6875rem] font-medium text-white">
+          <span className="absolute left-3.5 top-3.5 rounded-full bg-white/92 px-3 py-1.5 text-[0.6875rem] font-semibold text-ink-900 shadow-sm backdrop-blur-md">
             {STATUS_LABEL[project.status]}
           </span>
         </div>

@@ -1,8 +1,8 @@
 import Image from "next/image";
 
 /**
- * The Cube Holdings wordmark. The source artwork already contains the
- * "Holdings Limited" lockup, so no accompanying text is rendered.
+ * The CubeSense Properties wordmark. The source artwork is a full lockup
+ * (cube mark + wordmark + "PROPERTIES"), so no accompanying text is rendered.
  */
 export function Logo({
   className = "",
@@ -13,10 +13,10 @@ export function Logo({
 }) {
   return (
     <Image
-      src="/cube-logo.png"
-      alt="Cube Holdings Limited"
-      width={548}
-      height={455}
+      src="/cubesense-logo.png"
+      alt="CubeSense Properties"
+      width={1358}
+      height={287}
       priority={priority}
       className={className}
     />

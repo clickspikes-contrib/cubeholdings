@@ -69,7 +69,7 @@ export function SiteFooter() {
 
         <div className="grid gap-10 lg:grid-cols-[1.2fr_2fr]">
           <div>
-            <Logo className="dark-logo h-12 w-auto" />
+            <Logo className="dark-logo h-9 w-auto" />
             <p className="mt-5 max-w-xs text-[0.875rem] leading-relaxed text-[var(--muted)]">
               Residential and commercial developments across Dhaka since{" "}
               {site.since}. Member of REHAB.

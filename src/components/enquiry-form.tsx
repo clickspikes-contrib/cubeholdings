@@ -43,8 +43,10 @@ export function EnquiryForm({
     setState("sent");
   }
 
+  // Filled fields with a hairline read as more current than outlined boxes,
+  // and the focus ring lands on the field itself rather than a browser default.
   const field =
-    "focus-ring w-full rounded-sm border bg-transparent px-4 py-3 text-[0.9375rem] placeholder:text-[var(--muted)]";
+    "w-full rounded-[0.875rem] border border-[var(--line)] bg-[var(--surface-2)] px-4 py-3.5 text-[0.9375rem] outline-none transition-all duration-200 placeholder:text-[var(--muted)] focus:border-brand-500 focus:bg-[var(--surface)] focus:ring-4 focus:ring-brand-500/12";
 
   return (
     <form onSubmit={onSubmit} className="space-y-3">

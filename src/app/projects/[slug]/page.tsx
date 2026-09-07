@@ -106,7 +106,7 @@ export default async function ProjectPage({
         <header className="mt-8 flex flex-wrap items-end justify-between gap-6 border-b pb-10">
           <div>
             <div className="flex flex-wrap items-center gap-2.5">
-              <span className="rounded-full bg-brand-600 px-3 py-1.5 text-[0.6875rem] font-medium text-white">
+              <span className="badge">
                 {STATUS_LABEL[project.status]}
               </span>
               <span className="text-sm text-[var(--muted)]">{project.area}</span>

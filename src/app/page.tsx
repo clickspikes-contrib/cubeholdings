@@ -170,7 +170,7 @@ export default function Home() {
 
       {/* ——— Closing CTA ——— */}
       <section className="px-2 pb-2 lg:px-3 lg:pb-3">
-        <Reveal className="relative overflow-hidden rounded-[1.75rem] bg-ink-950 lg:rounded-[2.5rem]">
+        <Reveal className="relative overflow-hidden rounded-[1.75rem] bg-ink-950 shadow-[var(--shadow-lg)] lg:rounded-[2.25rem]">
           {feature?.images[2] && (
             <Image
               src={feature.images[2]}

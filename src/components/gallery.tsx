@@ -35,7 +35,7 @@ export function Gallery({ images, name }: { images: string[]; name: string }) {
       <div className="grid gap-3 sm:grid-cols-[1.9fr_1fr]">
         <button
           onClick={() => setOpen(true)}
-          className="focus-ring group relative aspect-[4/3] overflow-hidden rounded-sm bg-[var(--surface-2)]"
+          className="focus-ring group relative aspect-[4/3] overflow-hidden rounded-[1.25rem] bg-[var(--surface-2)]"
           aria-label={`Open ${name} gallery`}
         >
           <Image
@@ -59,7 +59,7 @@ export function Gallery({ images, name }: { images: string[]; name: string }) {
                 onClick={() => setActive(i)}
                 aria-label={`View image ${i + 1}`}
                 aria-current={i === active}
-                className={`focus-ring relative aspect-square overflow-hidden rounded-sm bg-[var(--surface-2)] transition-opacity ${
+                className={`focus-ring relative aspect-square overflow-hidden rounded-[0.875rem] bg-[var(--surface-2)] transition-opacity ${
                   i === active ? "ring-2 ring-brand-500" : "opacity-70 hover:opacity-100"
                 }`}
               >

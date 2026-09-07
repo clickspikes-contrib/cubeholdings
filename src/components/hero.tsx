@@ -11,7 +11,7 @@ export function Hero() {
 
   return (
     <section className="px-2 pt-2 lg:px-3 lg:pt-3">
-      <div className="relative overflow-hidden rounded-[1.75rem] bg-ink-950 lg:rounded-[2.5rem]">
+      <div className="relative overflow-hidden rounded-[1.75rem] bg-ink-950 shadow-[var(--shadow-lg)] lg:rounded-[2.25rem]">
         <Image
           src={feature.images[0]}
           alt={`${feature.name}, ${feature.area}`}
@@ -21,14 +21,15 @@ export function Hero() {
           className="object-cover"
         />
         {/* Legibility scrim: darkest at the lower left where the headline sits. */}
-        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/90 via-ink-950/45 to-ink-950/55" />
+        <div className="absolute inset-0 bg-gradient-to-t from-ink-950/92 via-ink-950/40 to-ink-950/30" />
+        <div className="absolute inset-0 bg-gradient-to-r from-ink-950/70 via-transparent to-transparent" />
 
         <div className="relative flex min-h-[560px] flex-col justify-end px-6 pb-12 pt-28 sm:min-h-[640px] lg:min-h-[720px] lg:px-14 lg:pb-16">
           <div className="flex flex-wrap gap-2">
             {CHIPS.map((c) => (
               <span
                 key={c}
-                className="rounded-full border border-white/25 bg-white/10 px-4 py-1.5 text-xs text-white backdrop-blur-sm"
+                className="rounded-full border border-white/20 bg-white/10 px-4 py-1.5 text-xs font-medium text-white/90 backdrop-blur-md"
               >
                 {c}
               </span>

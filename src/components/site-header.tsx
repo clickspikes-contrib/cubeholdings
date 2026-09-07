@@ -42,21 +42,23 @@ export function SiteHeader() {
 
   return (
     <header
-      className={`sticky top-0 z-50 transition-colors duration-500 ${
+      className={`sticky top-0 z-50 transition-all duration-500 ${
         scrolled
-          ? "bg-[color-mix(in_oklab,var(--bg)_88%,transparent)] backdrop-blur-xl"
-          : "bg-transparent"
+          ? "border-b border-[var(--line)] bg-[color-mix(in_oklab,var(--bg)_72%,transparent)] backdrop-blur-xl backdrop-saturate-150"
+          : "border-b border-transparent bg-transparent"
       } ${pathname === "/" ? "-mb-[76px]" : ""}`}
     >
       <div className="shell flex h-[76px] items-center gap-6">
         <Link
           href="/"
-          aria-label="Cube Holdings Limited — home"
+          aria-label="CubeSense Properties — home"
           className="focus-ring group shrink-0 rounded"
         >
+          {/* The lockup is ~4.7:1, so it is sized shorter than a square mark
+              would be to keep its footprint in the bar reasonable. */}
           <Logo
             priority
-            className={`h-10 w-auto transition-all group-hover:opacity-80 ${
+            className={`h-7 w-auto transition-all group-hover:opacity-80 sm:h-8 ${
               overHero ? "brightness-0 invert" : "dark-logo"
             }`}
           />
