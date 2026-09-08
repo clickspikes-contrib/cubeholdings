@@ -80,6 +80,9 @@
   --surface-2: var(--color-paper-dim);
   --shadow-card: var(--shadow-sm);
   --shadow-card-hover: var(--shadow-lg);
+  /* Distance the bottom-corner floating controls keep from the viewport
+     floor. The cookie bar raises it while it is on screen. */
+  --floating-offset: 1.5rem;
 }
 
 /* Dark mode gets lifted surfaces rather than a flat near-black: each layer

@@ -53,7 +53,7 @@ export function BackToTop() {
       aria-label="Back to top"
       tabIndex={visible ? 0 : -1}
       aria-hidden={!visible}
-      className={`focus-ring group fixed bottom-6 right-6 z-40 grid size-12 place-items-center rounded-full border bg-[var(--surface)] shadow-lg transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-[var(--surface-2)] ${
+      className={`focus-ring group fixed bottom-[var(--floating-offset)] right-6 z-40 grid size-12 place-items-center rounded-full border bg-[var(--surface)] shadow-lg transition-all duration-500 ease-[cubic-bezier(0.16,1,0.3,1)] hover:bg-[var(--surface-2)] ${
         visible
           ? "translate-y-0 scale-100 opacity-100"
           : "pointer-events-none translate-y-3 scale-90 opacity-0"

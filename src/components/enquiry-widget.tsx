@@ -62,7 +62,7 @@ export function EnquiryWidget() {
         aria-label={`Enquire with ${site.short}`}
         tabIndex={-1}
         inert={!open}
-        className={`fixed bottom-24 left-4 z-50 flex w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border bg-[var(--surface)] shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] sm:left-6 ${
+        className={`fixed bottom-[calc(var(--floating-offset)+4.5rem)] left-4 z-50 flex w-[min(400px,calc(100vw-2rem))] flex-col overflow-hidden rounded-2xl border bg-[var(--surface)] shadow-2xl transition-all duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] sm:left-6 ${
           open
             ? "translate-y-0 scale-100 opacity-100"
             : "pointer-events-none translate-y-4 scale-95 opacity-0"
@@ -71,7 +71,7 @@ export function EnquiryWidget() {
           transformOrigin: "bottom left",
           // Fill the space between the launcher and the top of the screen, so
           // the form gets every pixel available without ever overflowing it.
-          height: "min(640px, calc(100dvh - 8.5rem))",
+          height: "min(640px, calc(100dvh - var(--floating-offset) - 6rem))",
         }}
       >
         <div className="flex items-center justify-between gap-3 border-b bg-[var(--surface-2)] px-4 py-3">
@@ -131,7 +131,7 @@ export function EnquiryWidget() {
         }}
         aria-expanded={open}
         aria-label={open ? "Close enquiry form" : "Open enquiry form"}
-        className="focus-ring fixed bottom-6 left-4 z-50 grid size-14 place-items-center rounded-full bg-brand-600 text-white shadow-lg transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 active:scale-95 sm:left-6"
+        className="focus-ring fixed bottom-[var(--floating-offset)] left-4 z-50 grid size-14 place-items-center rounded-full bg-brand-600 text-white shadow-lg transition-transform duration-300 ease-[cubic-bezier(0.16,1,0.3,1)] hover:scale-105 active:scale-95 sm:left-6"
       >
         <svg
           viewBox="0 0 24 24"

@@ -25,6 +25,9 @@ export const site = {
     line: "Level 5, House 07, Road 17, Block D, Banani, Dhaka 1213, Bangladesh",
     maps: "https://maps.google.com/?q=Cube+Maqbul+Inventure+Banani+Dhaka",
   },
+  // GA4 measurement ID. Not a secret — it is served to every visitor in the
+  // page source — so it lives here rather than in a build-time env var.
+  gaId: "G-GDVS7LBJ5B",
   social: {
     // verify — these accounts belong to the previous company
     facebook: "https://www.facebook.com/cubeholdingsltd",

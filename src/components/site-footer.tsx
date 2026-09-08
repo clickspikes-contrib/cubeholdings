@@ -2,6 +2,7 @@ import Link from "next/link";
 import { site } from "@/lib/site";
 import { Logo } from "./logo";
 import { stats } from "@/data/projects";
+import { CookieSettingsLink } from "./cookie-settings-link";
 
 const columns = [
   {
@@ -156,6 +157,7 @@ export function SiteFooter() {
             >
               Terms &amp; conditions
             </Link>
+            <CookieSettingsLink />
           </div>
         </div>
       </div>
