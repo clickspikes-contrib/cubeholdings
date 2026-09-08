@@ -4,6 +4,7 @@ import { site } from "@/lib/site";
 import { SiteHeader } from "@/components/site-header";
 import { SiteFooter } from "@/components/site-footer";
 import { BackToTop } from "@/components/back-to-top";
+import { EnquiryWidget } from "@/components/enquiry-widget";
 import "./globals.css";
 
 // Public Sans — the face used by the Sneat template (and the US Web Design
@@ -72,6 +73,7 @@ export default function RootLayout({
         <main id="main">{children}</main>
         <SiteFooter />
         <BackToTop />
+        <EnquiryWidget />
       </body>
     </html>
   );

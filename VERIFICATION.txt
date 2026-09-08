@@ -1,0 +1,229 @@
+WHERE THE NUMBERS ON THE CUBESENSE SITE COME FROM
+==============================================================================
+
+The CubeSense site shows four headline figures on its home page, plus a set of
+area cards underneath. None of those are typed in by hand — they are all counted
+from the project data, which was carried over from the old Cube Holdings site.
+This file checks that the counting still lines up with what the old site says,
+and shows the working for each figure so you can re-do it yourself.
+
+Checked on:  Mon Sep 07 2026 13:24:20 GMT+0600
+The site:    https://cubesense.intelsensetech.com
+Checked against: https://www.cubeholdingsltd.com
+
+A note on how this file was made: it is written by scripts/verify-stats.mjs,
+which fetches the old site fresh every time it runs and recomputes everything.
+So none of the numbers below were copied by hand, and re-running the script is
+how you check whether anything has drifted since today.
+
+THE SHORT VERSION
+------------------------------------------------------------------------------
+WHAT THE SITE SHOWS                   OURS    THEIRS  
+38+  Projects delivered & underway    38      38      MATCH
+357+ Apartments planned               357     357     MATCH
+4    Prime Dhaka addresses            4       4       MATCH
+14+  Years building                   14      14      MATCH
+
+Everything agrees. The detail behind each line is below, one section per figure.
+
+
+1. "38+ PROJECTS DELIVERED & UNDERWAY"
+------------------------------------------------------------------------------
+Where it comes from:
+  https://www.cubeholdingsltd.com/sitemap.xml
+
+How it is counted:
+  The old site gives every project its own top-level page, so the sitemap is the
+  cleanest list of them. I took every top-level URL and threw out the ones that
+  are section or landing pages rather than projects — that is:
+    blog, featured, upcoming, ongoing, handed-over, contact-us, career,
+    project-search, all-brochures, want-to-know-about-projects,
+    client-stories-projects, landowner-partnerships, about-us,
+    terms-and-conditions.
+  What is left is one URL per project.
+
+What came back:
+  The old site publishes 38 project pages. Our data has 38.
+  I did not stop at the totals matching, because two different sets of 38 would
+  still add up — so I compared them slug by slug:
+    on their site but missing from ours: nothing
+    in ours but not on their site:       nothing
+  MATCH — the same 38 projects on both sides.
+
+Worth knowing:
+  The real number is exactly 38. The "+" is just how the stat is styled;
+  it is not padding a rounded figure.
+
+
+2. "357+ APARTMENTS PLANNED"
+------------------------------------------------------------------------------
+Where it comes from:
+  https://www.cubeholdingsltd.com/<project>
+  — all 38 project pages; every one is listed at the end of this file
+
+How it is counted:
+  Each project page has an "Apartments" field. I read that number off all 38
+  pages and added them up.
+
+What came back:
+  Their pages add up to 357. Ours add up to 357.
+  Projects where the two disagree: 0.
+  MATCH.
+
+Worth knowing — please read this one:
+  This total is not published anywhere on the old site. Nobody at Cube Holdings
+  ever wrote down 357; it is a sum we are computing from their per-project
+  figures. Every part of it traces back to their pages, but the total itself is
+  ours. It also counts apartments in upcoming and ongoing buildings, which is
+  why the label says "planned" rather than "built" or "sold". If you would
+  rather the site not present a derived number this prominently, that is a
+  reasonable call and easy to change.
+
+
+3. "4 PRIME DHAKA ADDRESSES"
+------------------------------------------------------------------------------
+Where it comes from:
+  https://www.cubeholdingsltd.com/about-us  — the paragraph naming the neighbourhoods
+  plus the address line on each of the 38 project pages
+
+How it is counted:
+  Group all the projects by area and count how many distinct areas there are.
+  I then went back to each project page separately and confirmed its address
+  really does mention the area we filed it under, so the grouping is not just
+  our own labelling repeated back to itself.
+
+What came back:
+  Bashundhara R/A (32), Uttara (4), Banani (1), Jolshiri Abashon (1)
+  Projects whose page did not back up their area: 0.
+  MATCH — and the about-us paragraph names exactly these four, no more.
+
+
+4. "14+ YEARS BUILDING"
+------------------------------------------------------------------------------
+Where it comes from:
+  https://www.cubeholdingsltd.com/               says 2012
+  https://www.cubeholdingsltd.com/about-us       says 2012
+
+How it is counted:
+  2026 minus 2012 is 14.
+  The two pages word it differently — the home page says "Established 2012" and
+  about-us says "Since 2012" — so I checked both rather than trusting one.
+  They agree, which is why this reads MATCH.
+
+Worth knowing:
+  This one moves on its own. It is worked out from the founding year in
+  src/lib/site.ts, not written into the page, so it will say 15 next January
+  without anyone touching it. That is deliberate, but it does mean the number
+  in this file has a shelf life.
+
+
+5. THE AREA CARDS
+------------------------------------------------------------------------------
+Where it comes from:
+  the area on each of the 38 project pages — same source as section 3
+
+How it is counted:
+  Group the projects by area and count each group. As a sanity check, the cards
+  have to add back up to the project count in section 1, otherwise a project has
+  gone missing or been counted twice.
+
+What came back:
+  Banani                 1
+  Bashundhara R/A        32
+  Jolshiri Abashon       1
+  Uttara                 4
+  adds up to             38  — same as the 38 projects, as it should be
+
+Worth knowing:
+  The spread is very lopsided — 32 of 38 sit in Bashundhara R/A, and two of the
+  four areas have a single project each. The cards are accurate, but showing
+  four areas side by side does imply a more even footprint than there is.
+
+
+6. ONGOING / UPCOMING / HANDED OVER
+------------------------------------------------------------------------------
+Where it comes from:
+  https://www.cubeholdingsltd.com/ongoing      (and /ongoing/residential, /ongoing/commercial)
+  https://www.cubeholdingsltd.com/upcoming     (and /upcoming/residential, /upcoming/commercial)
+  https://www.cubeholdingsltd.com/handed-over  (and /handed-over/residential, /handed-over/commercial)
+
+How it is counted:
+  Rather than trust a status field, I fetched each listing page and recorded
+  which project links appear on it. A project's status is whichever listing
+  page links to it.
+
+What came back:
+  STATUS                OURS    THEIRS  
+  ongoing               27      27      MATCH
+  upcoming              1       1       MATCH
+  handed-over           10      10      MATCH
+  Projects filed under a different status than theirs: 0.
+
+
+EVERY PROJECT, ONE PER LINE
+------------------------------------------------------------------------------
+The raw evidence behind all of the above. APTS is our figure, THEIRS is what
+their page says. Follow any link to check a row by hand.
+
+PROJECT                 AREA              STATUS       APTS  THEIRS THEIR PAGE
+ABESH                   Bashundhara R/A   ongoing      10    10     https://www.cubeholdingsltd.com/abesh
+ANKAN                   Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/ankan
+ASTHA                   Bashundhara R/A   upcoming     9     9      https://www.cubeholdingsltd.com/astha
+AVRONEEL                Uttara            ongoing      8     8      https://www.cubeholdingsltd.com/avroneel
+BAIVAB                  Bashundhara R/A   ongoing      8     8      https://www.cubeholdingsltd.com/baivab
+BANDHAN                 Bashundhara R/A   ongoing      8     8      https://www.cubeholdingsltd.com/bandhan
+BENUKA                  Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/benuka
+BOHOTA                  Bashundhara R/A   ongoing      28    28     https://www.cubeholdingsltd.com/bohota
+BONOKUNTOLA             Bashundhara R/A   handed-over  7     7      https://www.cubeholdingsltd.com/bonokuntola
+BRISTI                  Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/bristi
+CHANDRALI               Uttara            handed-over  9     9      https://www.cubeholdingsltd.com/chandrali
+CHOWDHURI RESIDENCE     Bashundhara R/A   handed-over  7     7      https://www.cubeholdingsltd.com/chowdhury-residence
+CUBE MOQBUL INVENTURE   Banani            handed-over  14    14     https://www.cubeholdingsltd.com/cube-moqbul-inventure
+DINANTE                 Bashundhara R/A   ongoing      8     8      https://www.cubeholdingsltd.com/dinante
+Drizzle                 Bashundhara R/A   handed-over  8     8      https://www.cubeholdingsltd.com/drizzle
+EKANTIKA                Bashundhara R/A   handed-over  8     8      https://www.cubeholdingsltd.com/ekantika
+FERA                    Bashundhara R/A   ongoing      6     6      https://www.cubeholdingsltd.com/fera
+GAHON                   Bashundhara R/A   ongoing      10    10     https://www.cubeholdingsltd.com/gahon
+KANON                   Bashundhara R/A   ongoing      8     8      https://www.cubeholdingsltd.com/kanon
+KUNTAL                  Bashundhara R/A   handed-over  10    10     https://www.cubeholdingsltd.com/kuntal
+MUHURTA                 Bashundhara R/A   ongoing      8     8      https://www.cubeholdingsltd.com/muhurta
+NEER                    Bashundhara R/A   ongoing      8     8      https://www.cubeholdingsltd.com/neer
+NIBIR                   Bashundhara R/A   ongoing      18    18     https://www.cubeholdingsltd.com/nibir
+NIVARA                  Jolshiri Abashon  ongoing      8     8      https://www.cubeholdingsltd.com/nivara
+NONGOR                  Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/nongor
+PRANTOR                 Bashundhara R/A   ongoing      6     6      https://www.cubeholdingsltd.com/prantor
+PROHOR                  Bashundhara R/A   handed-over  7     7      https://www.cubeholdingsltd.com/prohor
+PROSHANTI               Bashundhara R/A   ongoing      12    12     https://www.cubeholdingsltd.com/proshanti
+PROTEETI                Bashundhara R/A   ongoing      6     6      https://www.cubeholdingsltd.com/proteeti
+PUBALOY                 Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/pubaloy
+PURNOTA                 Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/purnota
+SANNIDHAYA              Uttara            ongoing      9     9      https://www.cubeholdingsltd.com/sannidhaya
+SPORSHO                 Bashundhara R/A   handed-over  6     6      https://www.cubeholdingsltd.com/sporsho
+SUPROBHAT               Uttara            handed-over  7     7      https://www.cubeholdingsltd.com/suprobhat
+TEERE                   Bashundhara R/A   ongoing      10    10     https://www.cubeholdingsltd.com/teere
+UCHCHHWAS               Bashundhara R/A   ongoing      16    16     https://www.cubeholdingsltd.com/uchchhwas
+UTTSHOV                 Bashundhara R/A   ongoing      9     9      https://www.cubeholdingsltd.com/uttshov
+ZAFRAN                  Bashundhara R/A   ongoing      7     7      https://www.cubeholdingsltd.com/zafran
+
+==============================================================================
+SO, WHERE DOES THAT LEAVE US
+------------------------------------------------------------------------------
+Everything checks out. All 38 projects match slug for slug, all 38 apartment
+counts match one by one, the status split matches, and both of their pages
+agree the company started in 2012.
+In short: 38 projects, 357 apartments, 4 areas, trading since 2012.
+
+Two things I would still flag, neither of them an error:
+
+  The 357 is a total we compute, not one they publish. See section 2. It is
+  correct arithmetic on their numbers, but it is our claim, not theirs.
+
+  "Projects delivered & underway" counts all 38 project pages, upcoming ones
+  included. If you want that headline to mean genuinely finished and handed
+  over, the honest number is 10. Which figure to show is a business
+  decision rather than a data one, so I have left it as is.
+
+To check any of this yourself, open the links above, or re-run:
+  node scripts/verify-stats.mjs
+It refetches their site and rewrites this file from scratch, so if their
+numbers change, this file will say so.
